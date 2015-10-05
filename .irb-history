@@ -1,0 +1,38 @@
+server_version['version']
+Calabash::Cucumber::MIN_SERVER_VERSION
+server_version['version']
+start_server_in_background
+start_test_server_in_background
+exit
+start_test_server_in_background
+query("*")
+query("* marked:'On Now'")
+query("*")
+query("android.widget.ImageView id:'menu_logo'")
+check_element_exists("android.widget.ImageView id:'menu_logo'")
+touch("android.widget.ImageView id:'menu_logo'")
+query("* marked:'On Now'")
+query(* id:'txt_title')
+query(* id:'txt_title'")
+query("* id:'txt_title'")
+query("* id:'txt_title'")
+query("* marked:'On Now'")
+query("* id:'txt_title'", :text='On Now')
+query("* id:'txt_title'", ":text='On Now'")
+query("* id:'txt_title' :text='On Now'")
+query("* marked='On Now'")
+query("* marked:'On Now'")
+query("* text:'On Now'")
+touch("* text:'On Now'")
+query("* marked:'Atlas3'")
+exit
+start_test_server_in_background
+start_test_server_in_background
+exit
+start_test_server_in_background
+exit
+start_test_server_in_background
+reinstall_app
+reinstall_apps
+start_test_server_in_background
+exit

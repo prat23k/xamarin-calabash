@@ -1,0 +1,15 @@
+machine:
+  xcode:
+    version: "6.3.1"
+
+dependencies:
+    override:
+        - sudo gem install calabash-cucumber
+
+
+test:
+    pre:
+        - pod setup
+        - pod install
+    post:
+        - cucumber
