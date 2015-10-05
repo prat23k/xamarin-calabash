@@ -1,4 +1,6 @@
-
+machine:
+  ruby:
+    version: 2.2.1p85
 
         dependencies:
           override:
