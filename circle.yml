@@ -17,9 +17,11 @@ machine:
             - sleep 5
 
              post:
+
                     - cucumber
 
          override:
+             -  ./run.rb android
              - cp unsigned.apk calabash.apk
              - calabash-android resign "`pwd`/atlas.apk"
              - calabash-android run "`pwd`/atlas.apk" --format junit --out /tmp/junit
