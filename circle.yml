@@ -3,7 +3,7 @@ machine:
 dependencies:
   override:
     - gem install calabash-android
-  test:
+test:
     pre:
       - emulator -avd circleci-android21 -no-audio -no-window:
           background: true
