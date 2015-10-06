@@ -1,8 +1,8 @@
 machine:
-  dependencies:
-    override:
-      - gem install calabash-android
 
+dependencies:
+  override:
+    - gem install calabash-android
   test:
     pre:
       - emulator -avd circleci-android21 -no-audio -no-window:
@@ -19,11 +19,7 @@ machine:
     post:
       - bundle exec cucumber
     override:
-               -  ./run.rb android
-               - cp unsigned.apk calabash.apk
-               - calabash-android resign "pwd/atlas.apk"
-               - calabash-android run "pwd/atlas.apk" --format junit --out /tmp/junit
-               - cp unsigned.apk $CIRCLE_ARTIFACTS
-               - cp *.png $CIRCLE_ARTIFACTS
-               - cp /tmp/junit/* $CIRCLE_TEST_REPORTS
-               - adb logcat -d > $CIRCLE_ARTIFACTS/logcat.txt
+               - calabash-android resign "pwd/prebuilt/atlas.apk"
+               - ./run.rb android
+
+
