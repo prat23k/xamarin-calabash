@@ -18,5 +18,5 @@ test:
   post:
     - bundle exec cucumber
   override:
-             - calabash-android resign "pwd/prebuilt/atlas.apk"
+             - calabash-android resign "`pwd`/prebuilt/atlas.apk"
              -  ./run.rb android
