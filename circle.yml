@@ -18,4 +18,5 @@ test:
   override:
              - bundle install
              - calabash-android resign "`pwd`/prebuilt/atlas.apk"
+             - adb devices
              -  ./run.rb android
