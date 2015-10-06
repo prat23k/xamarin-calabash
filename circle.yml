@@ -3,15 +3,15 @@ dependencies:
     - gem install calabash-android
 
 test:
-  pre:
-    - circle-android wait-for-boot
-    - sleep 5
-    - adb shell input keyevent 82
-    - sleep 5
-    - adb shell input touchscreen swipe 370 735 371 735
-    - sleep 5
-    - adb shell input touchscreen swipe 370 735 371 735
-    - sleep 5
+#  pre:
+#    - circle-android wait-for-boot
+#    - sleep 5
+#    - adb shell input keyevent 82
+#    - sleep 5
+#    - adb shell input touchscreen swipe 370 735 371 735
+#    - sleep 5
+#    - adb shell input touchscreen swipe 370 735 371 735
+#    - sleep 5
   override:
              - bundle install
              - gem install xamarin-test-cloud
