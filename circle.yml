@@ -4,7 +4,7 @@ dependencies:
 
 test:
   pre:
-    - emulator -avd circleci-android21 -no-audio -no-window:
+    - emulator -avd emulator-5554 -no-audio -no-window:
         background: true
         parallel: true
     - circle-android wait-for-boot
