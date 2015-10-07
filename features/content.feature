@@ -1,6 +1,9 @@
+
 Feature: As an Atlas Mobile App User I want to be presented with the content from the feed
 
-  @android
+  Background:
+    Given the app is launched
+
   Scenario Outline: User views the Home Page
     Given the user is viewing the <page> page
     When the content has loaded
@@ -8,5 +11,4 @@ Feature: As an Atlas Mobile App User I want to be presented with the content fro
 
   Examples:
     | page     |
-    | Home     |
     | Catch Up |

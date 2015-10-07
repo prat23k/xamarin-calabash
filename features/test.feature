@@ -1,6 +1,6 @@
 Feature: Initial experience
 
 
-  @info @reinstall
+  @demo
   Scenario: Obtaining more information
     Given I am on the first screen
