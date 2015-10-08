@@ -40,7 +40,7 @@ class SearchPage < Calabash::ABase
   end
 
   def search_get_visibile_results
-    wait_for_elements_exist( "* id:'txt_title'", :timeout => 10)
+    wait_for_elements_exist( "* id:'txt_title'", :timeout => 60)
     query("* id:'txt_title'", :text)
   end
 
