@@ -46,8 +46,8 @@ class MenuItemPage < Calabash::ABase
 
   def scroll_to_submenu (nav_item)
     wait_for_element_exists("* id:'toolbar_title' text:'Catch Up'")
-    wait_poll(:until_exists => "* marked:'#{nav_item}'", :timeout => 120) do
-      pan("android.support.design.widget.TabLayout$TabView", :right, from: {x: 50, y: 180}, to: {x: 100000, y:180})
+    wait_poll(:until_exists => "* marked:'#{nav_item}'", :timeout => 60) do
+      pan("android.support.design.widget.TabLayout$TabView", :right, from: {x: 100, y: 180}, to: {x: 100000, y:180})
     end
   end
 end
