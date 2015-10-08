@@ -17,12 +17,13 @@ class HomePage < Calabash::ABase
 
   def open_menu
     touch("android.widget.ImageButton contentDescription:'Navigate up'")
+    wait_for_elements_exist( "* id:'menu_logo'", :timeout => 10)
   end
 
   def open_menu_page page
 
     if !page.eql?("Home")
-      touch("* id:'txt_title' text:'#{page}'")
+      tap_when_element_exists("* id:'txt_title' text:'#{page}'")
     end
 
     wait_for(:timeout => 60) { element_exists("* id:'toolbar_title' text:'#{page}'")}
