@@ -17,4 +17,4 @@ test:
              - gem install xamarin-test-cloud
 #             - calabash-android resign "`pwd`/prebuilt/atlas.apk"
              - bundle exec calabash-android build /home/ubuntu/xamarin-calabash/prebuilt/atlas.apk
-             - test-cloud submit "`pwd`/prebuilt/atlas.apk" a9c971049636ba5debb3b8eda661721e --devices 1da93d40 --series "master" --locale "en_GB" --user prathima.kalluri@sky.uk --profile "android" --config "`pwd`/config/cucumber.yml"
+             - test-cloud submit "`pwd`/prebuilt/atlas.apk" a9c971049636ba5debb3b8eda661721e --devices 1ad6c5b7 --series "master" --locale "en_GB" --user prathima.kalluri@sky.uk --profile "android" --config "`pwd`/config/cucumber.yml"
