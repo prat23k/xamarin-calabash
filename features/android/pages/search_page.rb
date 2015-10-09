@@ -15,20 +15,29 @@ class SearchPage < Calabash::ABase
   end
 
 
+  def array_includes_all?( array, comparision_array )
+    contains = true
+    for i in comparision_array do
+      unless array.include? i
+        contains = false
+      end
+    end
+    return contains
+  end
+
   def search_verify_results search_term
     number_titles_to_compare = 5
 
-    feed_results = helper.get_search_results(search_term).first(number_titles_to_compare)
+    feed_results = helper.get_search_results(search_term)
     app_results = get_search_results_with_scroll number_titles_to_compare
 
     puts "Search Feed:"
-    puts feed_results
+    puts feed_results.first(number_titles_to_compare*2)
     puts "App:"
     puts app_results
 
-    feed_results.eql?(app_results).should == true
+    array_includes_all?( feed_results, app_results ).should == true
   end
-
 
   def get_search_results_with_scroll minimum_number_of_results_to_collect
     results = search_get_visibile_results
