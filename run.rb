@@ -14,7 +14,7 @@ EOF
 end
 
 if target == 'android'
-  exec("export APP=prebuilt/atlas.apk && bundle exec calabash-android run $APP -p android #{ARGV.join(' ')}")
+  exec("export APP=prebuilt/atlas.apk && bundle exec calabash-android run $APP -p android #{ARGV.join(' ')} --format html --out reports.html")
 elsif target == 'android-xamarin'
   exec("export APP=prebuilt/Sky.Ott.Atlas.Mobile.Poc.Android.Nightly-Signed.apk && bundle exec calabash-android run $APP -p android-xamarin #{ARGV.join(' ')}")
 elsif target == 'ios'

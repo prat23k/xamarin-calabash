@@ -1,7 +1,6 @@
 require 'calabash-android/abase'
 
-class MenuItemPage < Calabash::ABase
-  include CommonPageActions
+class MenuItemPage < BasePage
 
   def trait
     "* id:'toolbar_title'"

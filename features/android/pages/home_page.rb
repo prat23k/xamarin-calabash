@@ -1,13 +1,9 @@
 require 'calabash-android/abase'
 
-class HomePage < Calabash::ABase
+class HomePage < BasePage
 
   def trait
     "* id:'toolbar_title' text:'Home'"
-  end
-
-  def print_something
-    puts "printing something from native app"
   end
 
   def go_to_menu_page page
