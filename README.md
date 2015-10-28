@@ -6,6 +6,10 @@ A well-established pattern in test engineering is the *Page-Object Pattern* (POP
 
 We've created a sample project: [X-Platform-Example](https://github.com/calabash/x-platform-example) using the open source WordPress app. If you want to follow along and try things out, go to the project page [https://github.com/calabash/x-platform-example](https://github.com/calabash/x-platform-example) and follow install and run instructions. You can also choose to just read about the principles in this article and try to implement them in you own app.
 
+# Circle ci integration and running tests on xamarin test cloud
+
+Android calabash scripts integrated with circle ci and running tests on xamarin test cloud
+
 # Page Objects
 
 A *page object* is an object that represents a single screen (page) in your application. For mobile, "screen object" would possibly be a better word, but Page Object is an established term that we'll stick with.
